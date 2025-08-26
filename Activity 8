@@ -1,8 +1,7 @@
-a = 6
-b = 3
-
-name-1 = "micoh"
-name-2 = "Ebarle"
-
-print(a<= b)
-print(name-1 != name-2)
+a = 5 
+b = 5 
+name_1 = 'micoh' 
+name_2 = 'Micoh' 
+print(a >= b) 
+print(name_1 != name_2)
+print(name_1 == name_2)
