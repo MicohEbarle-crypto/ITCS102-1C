@@ -1,3 +1,7 @@
-Username("Username ...")
-Password("Password ...")
-print(Username(=Micoh) and password(=pogi Ako123)
+a = 8 
+b = 9
+c = 10 
+d = 6 
+print( (a > b) and (c < d) ) 
+print( (a < b) or (c < d) ) 
+print(not((a < b) or (c < d)) )
