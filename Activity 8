@@ -1,0 +1,8 @@
+a = 3
+b = 3
+
+name-1 = 'micoh'
+name-2 = 'Ebarle'
+
+print( a<= b )
+print( name-1 == name-2 )
