@@ -1,0 +1,8 @@
+username = 'micoh' 
+past = 'micoh123' 
+u = input("USERNAME → ") 
+p = input("PASSWORD → ")  
+if u == username and p == past : 
+       print("you are login ") 
+else: 
+       print("you are not login ")
