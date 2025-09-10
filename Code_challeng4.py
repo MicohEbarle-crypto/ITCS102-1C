@@ -25,21 +25,21 @@ if a == 'fantasy':
      if m == 'short': 
        i = input("how long decade? (19s,20s)")
        if i == '19s' :
-           print("I recomend is Rurouni Kenshin: Trust & Betrayal")
+           print("I recomend is Record of Lodoss War")
        if i == '20s' :
-           print("Akudama Drive")
+           print("I recomend is Scrapped Princess")
      if m == 'medium':
         i = input("how long decade? (19s,20s)")
         if i == '19s' :
-             print("I recomend is Trigun")
+             print("I recomend is Slayers")
         if i == '20s' :
-             print("I recomend isa My Hero Academia: Vigilantes ")
+             print("I recomend is a Tsubasa: Reservoir Chronicle ")
      if m == 'large' :
         i = input("how long decade? (19s,20s)")
         if i == '19s' :
-            print("I recomend is Dragon Ball Z")
+            print("I recomend is Dragon Quest: Dai no Daibouken")
         if i == '20s' :
-            print("I recomend isa Jujutsu Kaisen")
+            print("I recomend is Inuyasha")
 if a == 'mystery': 
      m = input("how its long? (short, medium, large)") 
      if m == 'short': 
