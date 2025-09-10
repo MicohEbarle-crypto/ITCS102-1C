@@ -60,3 +60,5 @@ if a == 'mystery':
             print("I recomend is Detective Conan")
         if i == '20s' :
             print("I recomend is Higurashi no Naku Koro ni franchise")
+else :
+     print("incorrect keyword")
