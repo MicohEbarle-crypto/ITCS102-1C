@@ -1,0 +1,244 @@
+import random
+info = {}
+
+while True:
+    print("\n======================================")
+    print(" SMART STUDENT TOOLKIT")
+    print("======================================")
+    print("[1] Simple Calculator")
+    print("[2] Friendly Games")
+    print("[3] Personal information form ")
+    print("[0] Exit")
+    print("======================================")
+    choice = input("Select option: ")
+
+    if choice == '1':
+        while True:
+            print("\n=== SIMPLE CALCULATOR ===")
+            print("Choose operation:")
+            print("[1] Addition")
+            print("[2] Subtraction")
+            print("[3] Multiplication")
+            print("[4] Division")
+            print("[0] Back")
+
+            op = input("Select: ")
+
+            if op == '1':
+                print("[1] 2 numbers")
+                print("[2] 3 numbers")
+                print("[3] 4 numbers")
+                print("[4] 5 numbers")
+                add = input("How many numbers do you want? ")
+
+                if add == '1':
+                    a = eval(input("First number: "))
+                    b = eval(input("Second number: "))
+                    print("Answer =", a + b)
+
+                elif add == '2':
+                    a = eval(input("Num 1: "))
+                    b = eval(input("Num 2: "))
+                    c = eval(input("Num 3: "))
+                    print("Answer =", a + b + c)
+
+                elif add == '3':
+                    a = eval(input("Num 1: "))
+                    b = eval(input("Num 2: "))
+                    c = eval(input("Num 3: "))
+                    d = eval(input("Num 4: "))
+                    print("Answer =", a + b + c + d)
+
+                elif add == '4':
+                    a = eval(input("Num 1: "))
+                    b = eval(input("Num 2: "))
+                    c = eval(input("Num 3: "))
+                    d = eval(input("Num 4: "))
+                    e = eval(input("Num 5: "))
+                    print("Answer =", a + b + c + d + e)
+
+                else:
+                    print("Invalid input")
+
+            elif op == '2':
+                a = eval(input("First number: "))
+                b = eval(input("Second number: "))
+                print("Answer =", a - b)
+
+            elif op == '3':
+                a = eval(input("First number: "))
+                b = eval(input("Second number: "))
+                print("Answer =", a * b)
+
+            elif op == '4':
+                a = eval(input("First number: "))
+                b = eval(input("Second number: "))
+                if b != 0:
+                    print("Answer =", a / b)
+                else:
+                    print("Error: Division by zero")
+
+            
+            
+            elif op == '0':
+                break
+
+            else:
+                print("Invalid option.")
+    if choice == '2':
+         while True:
+            print("\n=== FRIENDLY GAMES ===")
+            print("[1] Rock, Paper, Scissors")
+            print("[2] Guess the Number")
+            print("[3] Dice roll simulator")
+            print("[0] Back")
+            game_choice = input("What game do you want to play? ")
+            if game_choice == '0':
+                break
+            elif game_choice == '1':
+                while True:
+                    print("\n=== ROCK PAPER SCISSORS ===")
+                    print("[1] Rock")
+                    print("[2] Paper")
+                    print("[3] Scissors")
+                    print("[0] Back")
+                    user_choice = input("Enter your choice: ")
+                    if user_choice == '0':
+                        break
+                    if user_choice not in ['1', '2', '3']:
+                        print("Invalid choice. Please try again.")
+                        continue
+                    choices = ['Rock', 'Paper', 'Scissors']
+                    computer_choice = random.choice(choices)
+                    user_choice = choices[int(user_choice) - 1]
+                    print(f"\nYou chose: {user_choice}")
+                    print(f"Computer chose: {computer_choice}\n")
+                    if user_choice == computer_choice:
+                        print(f"It's a tie!")
+                    elif user_choice == 'Rock':
+                        if computer_choice == 'Scissors':
+                            print("Rock smashes scissors! You win!")
+                        else:
+                            print("Paper covers rock! You lose.")
+                    elif user_choice == 'Paper':
+                        if computer_choice == 'Rock':
+                            print("Paper covers rock! You win!")
+                        else:
+                            print("Scissors cuts paper! You lose.")
+                    elif user_choice == 'Scissors':
+                        if computer_choice == 'Paper':
+                            print("Scissors cuts paper! You win!")
+                        else:
+                            print("Rock smashes scissors! You lose.")
+            elif game_choice == '2':
+                print("\n===Guest the number 1-10===")
+                print("-------------------------------------------------------")
+                a = random.randint(1-10)
+                b = 0
+                c = True
+                while c ==True:
+                	gue = eval(input("guest the number 1-10"))
+                	if gue == a:
+                		b += 1
+                		print("winner ")
+                		break
+                	else :
+                		print("incorect")
+                		continue
+                
+            elif game_choice == '3':
+            	while True:
+                    print("\n=== DICE ROLL SIMULATOR ===")
+                    print("[1] Roll a single die")
+                    print("[2] Roll two dice")
+                    print("[3] Roll a custom die")
+                    print("[0] Back")
+                    dice_choice = input("Enter your choice: ")
+                    if dice_choice == '0':
+                        break
+                    elif dice_choice == '1':
+                        print(f"You rolled a {random.randint(1, 6)}")
+                    elif dice_choice == '2':
+                        roll1 = random.randint(1, 6)
+                        roll2 = random.randint(1, 6)
+                        print(f"You rolled a {roll1} and a {roll2}. Total: {roll1 + roll2}")
+                    elif dice_choice == '3':
+                        sides = int(input("Enter the number of sides on the die: "))
+                        print(f"You rolled a {random.randint(1, sides)}")
+                    else:
+                        print("Invalid choice. Please try again.")
+    if choice == '3':
+        while True:
+            print("Personal Information Form")
+            print("[1] Add your personal information")
+            print("[2] Print all your personal information")
+            print("[3] Edit your personal information")
+            print("[4] Delete your personal information")
+            print("[5] Exit")
+
+            choice = input("Enter your choice: ")
+
+            if choice == "1":
+                name = input("Input your name: ")
+                age = input("Input your age: ")
+                address = input("Input your address: ")
+                ed = input("Input your Educational Background(degree): ")
+                we = input("Input your work experience: ")
+                skills = input("Input your skills: ")
+
+                info[name] = {
+                "Age": age,
+                "Address": address,
+                "Educational Background": ed,
+                "Work Experience": we,
+                "Skills": skills
+                }
+
+                print("Personal Information Added Successfully!")
+                continue
+
+            elif choice == "2":
+                try:
+                    print("Your Personal Information:")
+                    for name, details in info.items():
+                        print(f"Name: {name}")
+                    for category, value in details.items():
+                        print(f"{category}: {value}")
+                        print("------------------------")
+                except Exception as e:
+                    print("No personal information added yet.")
+                continue
+
+            elif choice == "3":
+                 try:
+                    name = input("Enter the name of the person you want to edit: ")
+                    if name in info:
+                        print("Edit your personal information:")
+                    for category in info[name]:
+                        info[name][category] = input(f"Input your {category}: ")
+                    print("Personal Information Updated Successfully!")
+                    else:
+                        print("No record found with this name.")
+                    except Exception as e:
+                     print("No personal information added yet.")
+                    continue
+
+                elif choice == "4":
+                    try:
+                        name = input("Enter the name of the person you want to delete: ")
+                    if name in info:
+                        del info[name]
+                        print("Personal Information Deleted Successfully!")
+                    else:
+                        print("No record found with this name.")
+                    except Exception as e:
+                    print("No personal information added yet.")
+                    continue
+
+    elif choice == "0":
+        print("Exiting the program. Goodbye!")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
+        continue
